@@ -29,3 +29,10 @@ class estate_property(models.Model):
     ) # why is there a case sensitivity issue with the selection values? Should they be capitalized or not?
     active = fields.Boolean(string="Active", default=True)
     last_seen = fields.Datetime(string="Last Seen", default=fields.Datetime.now, copy=False)
+    state = fields.Selection(
+        string="Status",
+        selection=[("new", "New"), ("open", "Open"), ("sold", "Sold"), ("cancelled", "Cancelled")],
+        default="new",
+        copy=False,
+        required=True
+    )
