@@ -30,9 +30,15 @@ class estate_property(models.Model):
     active = fields.Boolean(string="Active", default=True)
     last_seen = fields.Datetime(string="Last Seen", default=fields.Datetime.now, copy=False)
     state = fields.Selection(
+        [
+            ("new", "New"),
+            ("offer_received", "Offer Received"),
+            ("offer_accepted", "Offer Accepted"),
+            ("sold", "Sold"),
+            ("cancelled", "Cancelled"),
+        ],
         string="Status",
-        selection=[("new", "New"), ("open", "Open"), ("sold", "Sold"), ("cancelled", "Cancelled")],
+        required=True,
         default="new",
         copy=False,
-        required=True
     )
