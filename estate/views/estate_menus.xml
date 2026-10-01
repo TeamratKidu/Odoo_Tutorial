@@ -2,8 +2,9 @@
 <odoo>
     <data>
         <menuitem id="estate_menu_root" name="Estate">
-            <menuitem id="estate_first_level_menu" name="First Level Menu">
-                <menuitem id="estate_property_model_menu_action" action="estate_property_model_action"/>
+            <menuitem id="estate_first_level_menu" name="Properties">
+                <menuitem id="estate_property_model_menu_action"
+                    action="estate_property_model_action" />
             </menuitem>
         </menuitem>
     </data>

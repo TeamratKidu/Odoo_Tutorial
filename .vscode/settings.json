@@ -1,0 +1,16 @@
+{
+    "xml.symbols.enabled": false,
+    "python.languageServer": "Default",
+    "Odoo.selectedProfile": "default",
+    "python.analysis.extraPaths": [
+      "${workspaceFolder}/../odoo",
+      "${workspaceFolder}/../odoo/odoo/addons",
+      "${workspaceFolder}"
+    ],
+  "xml.fileAssociations": [
+    {
+      "pattern": "**/estate/**/*.xml",
+      "systemId": "C:/Users/aham/PARA/1.Projects/Odoo/odoo/odoo/import_xml.rng"
+    }
+  ]
+}

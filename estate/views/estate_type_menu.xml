@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+   <data>
+      <menuitem id="estate_property_type_menu_root"
+         name="Property Types"
+         parent="estate_menu_root">
+         <menuitem id="estate_property_type_fist_level_menu" name="Types">
+            <menuitem id="estate_property_type_action_menu"
+               name="Property Types"
+               action="estate_property_type_model_action" />
+         </menuitem>
+      </menuitem>
+      <menuitem id="estate_property_tag_menu_action"
+         name="Property Tags"
+         parent="estate_menu_root"
+         action="estate_property_tag_model_action" />
+   </data>
+</odoo>
