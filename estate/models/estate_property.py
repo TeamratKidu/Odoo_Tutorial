@@ -57,8 +57,6 @@ class EstateProperty(models.Model):
     offer_ids = fields.One2many("estate.property.offer", "property_id", string="Offers")
 
     total_area = fields.Float(string="Total Area (sqm)", compute="_compute_total_area")
-    # 2. Computed Field on Relational One2many Line
-    offer_ids = fields.One2many("estate.property.offer", "property_id", string="Offers")
     best_price = fields.Float(
         string="Best Offer",
         compute="_compute_best_price",
