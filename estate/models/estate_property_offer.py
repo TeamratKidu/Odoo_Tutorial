@@ -57,3 +57,12 @@ class EstatePropertyOffer(models.Model):
         for offer in self:
             offer.status = "refused"
         return True
+
+
+    
+    @api.model
+    def create(self, vals):
+        offers = super().create(vals)
+        offers.property_id.state = "offer_received"
+        return offers
+
