@@ -6,7 +6,7 @@ class ResUsers(models.Model):
     _inherit = "res.users"
 
 
-    property_ids = fields.One2many("estate.property", "user_id", string="Properties")
+    property_ids = fields.One2many("estate.property", "salesperson_id", string="Properties")
 
     @api.model
     def create(self, vals):
