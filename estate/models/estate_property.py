@@ -1,4 +1,6 @@
 
+from typing import override
+
 from odoo import api, fields, models
 from dateutil.relativedelta import relativedelta
 from odoo.exceptions import UserError
@@ -128,3 +130,11 @@ class EstateProperty(models.Model):
             if record.state not in ("new", "cancelled"):
                 raise UserError("Only new or cancelled properties can be deleted.")
 
+    @override
+    def action_sold(self):
+        setted = super().action_sold();
+        for record in self:
+            if record.state == "offer_accepted":
+                record.status = "refused"
+        return setted
+        
