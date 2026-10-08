@@ -132,3 +132,8 @@ dmypy.json
 
 .github
 learning/
+# Agent Host reads workspace skills; keep them visible to Git.
+!.github/
+.github/*
+!.github/skills/
+!.github/skills/**
