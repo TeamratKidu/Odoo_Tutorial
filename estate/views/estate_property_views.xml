@@ -32,7 +32,7 @@
 
                 <header>
                     <button name="action_sold" string="Sold" type="object"
-                        invisible="state not in ['new', 'offer_received']" />
+                        invisible="state not in ['new', 'offer_received', 'offer_accepted']" />
                     <button name="action_cancel" string="Cancel" type="object"
                         invisible="state not in ['new', 'offer_received']" />
                     <field name="state" widget="statusbar"
