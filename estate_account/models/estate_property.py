@@ -5,8 +5,8 @@ from odoo import Command, models
 
 
 class EstateProperty(models.Model):
-    _name = "estate.property"
-    _description = "Estate Property"
+    # _name = "estate.property"
+    # _description = "Estate Property"
     _inherit = "estate.property"
 
     @override
