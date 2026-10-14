@@ -7,7 +7,6 @@
     "description": """
         Real Estate Account Management System
     """,
-    "Application": True,
     "auto_install": True
 
 }
