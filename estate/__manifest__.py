@@ -1,5 +1,5 @@
 {
-    "name": "Real Estate",
+    "name": "Real Estate Advertisement",
     "version": "1.0",
     "depends": ["base"],
     "author": "Teamrat Kidu",
@@ -17,5 +17,8 @@
         "views/estate_menus.xml",
         "views/estate_type_menu.xml",
         "views/res_users_views.xml",
-    ]
+    ],
+    "demo": [
+        "demo/estate_demo.xml",
+    ],
 }

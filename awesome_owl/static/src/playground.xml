@@ -1,10 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
 
     <t t-name="awesome_owl.playground">
-        <div class="p-3">
+        <div class="p-3" border="1px solid #000">
             hello world
+
+            <div class="p-3" border="1px solid #000" background-color="lightblue">
+            <p>Counter: <t t-esc="state.count"/></p>
+            <button t-on-click="increment" color="primary" background-color="lightblue">Click me!</button>
+
+            </div>
+
         </div>
+        <counter />
+        <counter />
+
     </t>
 
 </templates>

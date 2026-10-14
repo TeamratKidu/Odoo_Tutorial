@@ -1,0 +1,199 @@
+<odoo>
+    <data noupdate="1">
+        <record id="partner_owner_aster" model="res.partner">
+            <field name="name">Aster Bekele</field>
+            <field name="street">Bole Road</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="phone">+251 900 000 101</field>
+            <field name="email">aster.bekele@example.com</field>
+            <field name="country_id" ref="base.et" />
+        </record>
+        <record id="partner_owner_green_horizon" model="res.partner">
+            <field name="name">Green Horizon Properties PLC</field>
+            <field name="is_company" eval="True" />
+            <field name="street">Africa Avenue</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="phone">+251 900 000 102</field>
+            <field name="email">contact@greenhorizon.example.com</field>
+            <field name="country_id" ref="base.et" />
+        </record>
+        <record id="partner_owner_mulugeta" model="res.partner">
+            <field name="name">Mulugeta Tesfaye</field>
+            <field name="street">Piazza</field>
+            <field name="city">Hawassa</field>
+            <field name="zip">1000</field>
+            <field name="phone">+251 900 000 103</field>
+            <field name="email">mulugeta.tesfaye@example.com</field>
+            <field name="country_id" ref="base.et" />
+        </record>
+        <record id="partner_buyer_rahel" model="res.partner">
+            <field name="name">Rahel Tadesse</field>
+            <field name="street">Megenagna</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="phone">+251 900 000 201</field>
+            <field name="email">rahel.tadesse@example.com</field>
+            <field name="country_id" ref="base.et" />
+        </record>
+        <record id="partner_buyer_dawit" model="res.partner">
+            <field name="name">Dawit Alemu</field>
+            <field name="street">CMC Road</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="phone">+251 900 000 202</field>
+            <field name="email">dawit.alemu@example.com</field>
+            <field name="country_id" ref="base.et" />
+        </record>
+        <record id="partner_buyer_hana" model="res.partner">
+            <field name="name">Hana Girma</field>
+            <field name="street">Mekane Yesus Road</field>
+            <field name="city">Hawassa</field>
+            <field name="zip">1000</field>
+            <field name="phone">+251 900 000 203</field>
+            <field name="email">hana.girma@example.com</field>
+            <field name="country_id" ref="base.et" />
+        </record>
+
+        <record id="property_type_apartment" model="estate.property.type">
+            <field name="name">Apartment</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="property_type_house" model="estate.property.type">
+            <field name="name">House</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="property_type_villa" model="estate.property.type">
+            <field name="name">Villa</field>
+            <field name="sequence">30</field>
+        </record>
+        <record id="property_type_office" model="estate.property.type">
+            <field name="name">Office</field>
+            <field name="sequence">40</field>
+        </record>
+        <record id="property_type_warehouse" model="estate.property.type">
+            <field name="name">Warehouse</field>
+            <field name="sequence">50</field>
+        </record>
+
+        <record id="tag_new_listing" model="estate.property.tag">
+            <field name="name">New Listing</field>
+        </record>
+        <record id="tag_bole" model="estate.property.tag">
+            <field name="name">Bole</field>
+        </record>
+        <record id="tag_garden" model="estate.property.tag">
+            <field name="name">Garden</field>
+        </record>
+        <record id="tag_investment" model="estate.property.tag">
+            <field name="name">Investment</field>
+        </record>
+        <record id="tag_commercial" model="estate.property.tag">
+            <field name="name">Commercial</field>
+        </record>
+
+        <record id="property_bole_apartment" model="estate.property">
+            <field name="name">Sunrise Court Two-Bedroom - Bole</field>
+            <field name="description">Bright two-bedroom apartment near Bole International Airport
+                in Addis Ababa.</field>
+            <field name="postcode">1000</field>
+            <field name="expected_price">15000000</field>
+            <field name="bedrooms">2</field>
+            <field name="living_area">96</field>
+            <field name="facades">2</field>
+            <field name="garage" eval="True" />
+            <field name="property_type_id" ref="property_type_apartment" />
+            <field name="partner_id" ref="partner_owner_aster" />
+            <field name="tag_ids" eval="[(6, 0, [ref('tag_new_listing'), ref('tag_bole')])]" />
+        </record>
+        <record id="property_cmc_villa" model="estate.property">
+            <field name="name">Family Villa - CMC</field>
+            <field name="description">Three-bedroom family villa in the CMC area of Addis Ababa,
+                with a private garden.</field>
+            <field name="postcode">1000</field>
+            <field name="expected_price">22000000</field>
+            <field name="bedrooms">3</field>
+            <field name="living_area">185</field>
+            <field name="garden" eval="True" />
+            <field name="garden_area">48</field>
+            <field name="garden_orientation">east</field>
+            <field name="property_type_id" ref="property_type_villa" />
+            <field name="partner_id" ref="partner_owner_green_horizon" />
+            <field name="tag_ids" eval="[(6, 0, [ref('tag_garden'), ref('tag_investment')])]" />
+        </record>
+        <record id="property_hawassa_house" model="estate.property">
+            <field name="name">Lakeside Family Home - Hawassa</field>
+            <field name="description">Three-bedroom home in Hawassa, a short drive from the
+                lakefront.</field>
+            <field name="postcode">1000</field>
+            <field name="expected_price">11800000</field>
+            <field name="bedrooms">3</field>
+            <field name="living_area">142</field>
+            <field name="garden" eval="True" />
+            <field name="garden_area">65</field>
+            <field name="garden_orientation">south</field>
+            <field name="property_type_id" ref="property_type_house" />
+            <field name="partner_id" ref="partner_owner_mulugeta" />
+            <field name="tag_ids" eval="[(6, 0, [ref('tag_garden'), ref('tag_new_listing')])]" />
+        </record>
+        <record id="property_kazanchis_office" model="estate.property">
+            <field name="name">Business Suite - Kazanchis</field>
+            <field name="description">Commercial office suite in the Kazanchis business district of
+                Addis Ababa.</field>
+            <field name="postcode">1000</field>
+            <field name="expected_price">31000000</field>
+            <field name="bedrooms">0</field>
+            <field name="living_area">210</field>
+            <field name="property_type_id" ref="property_type_office" />
+            <field name="partner_id" ref="partner_owner_green_horizon" />
+            <field name="tag_ids" eval="[(6, 0, [ref('tag_commercial'), ref('tag_investment')])]" />
+        </record>
+        <record id="property_adama_warehouse" model="estate.property">
+            <field name="name">Distribution Warehouse - Adama</field>
+            <field name="description">Large warehouse outside central Adama, suitable for storage
+                and distribution.</field>
+            <field name="postcode">1000</field>
+            <field name="expected_price">27000000</field>
+            <field name="bedrooms">0</field>
+            <field name="living_area">640</field>
+            <field name="state">cancelled</field>
+            <field name="property_type_id" ref="property_type_warehouse" />
+            <field name="partner_id" ref="partner_owner_green_horizon" />
+            <field name="tag_ids" eval="[(6, 0, [ref('tag_commercial')])]" />
+        </record>
+
+        <record id="offer_bole_rahel" model="estate.property.offer">
+            <field name="price">13600000</field>
+            <field name="status">refused</field>
+            <field name="partner_id" ref="partner_buyer_rahel" />
+            <field name="property_id" ref="property_bole_apartment" />
+            <field name="validity">5</field>
+        </record>
+        <record id="offer_bole_dawit" model="estate.property.offer">
+            <field name="price">14300000</field>
+            <field name="status">accepted</field>
+            <field name="partner_id" ref="partner_buyer_dawit" />
+            <field name="property_id" ref="property_bole_apartment" />
+            <field name="validity">7</field>
+        </record>
+        <record id="offer_cmc_hana" model="estate.property.offer">
+            <field name="price">18500000</field>
+            <field name="partner_id" ref="partner_buyer_hana" />
+            <field name="property_id" ref="property_cmc_villa" />
+            <field name="validity">10</field>
+        </record>
+        <record id="offer_cmc_rahel" model="estate.property.offer">
+            <field name="price">19250000</field>
+            <field name="partner_id" ref="partner_buyer_rahel" />
+            <field name="property_id" ref="property_cmc_villa" />
+            <field name="validity">7</field>
+        </record>
+
+        <record id="property_bole_apartment" model="estate.property">
+            <field name="state">offer_accepted</field>
+            <field name="buyer_id" ref="partner_buyer_dawit" />
+            <field name="selling_price">14300000</field>
+        </record>
+    </data>
+</odoo>
