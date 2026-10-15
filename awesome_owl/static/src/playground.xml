@@ -2,19 +2,23 @@
 <templates xml:space="preserve">
 
     <t t-name="awesome_owl.playground">
-        <div class="p-3" border="1px solid #000">
-            hello world
-
-            <div class="p-3" border="1px solid #000" background-color="lightblue">
-            <p>Counter: <t t-esc="state.count"/></p>
-            <button t-on-click="increment" color="primary" background-color="lightblue">Click me!</button>
-
+        <div class="d-flex align-items-center gap-2">
+            <span>hello world</span>
+            <div class="d-flex align-items-center gap-2 border p-2">
+                <span>Counter: <t t-esc="state.count"/></span>
+                <button class="btn btn-primary" t-on-click="increment">Increment</button>
             </div>
-
         </div>
-        <counter />
-        <counter />
 
+        <div class="d-flex gap-2 mt-2">
+            <Counter/>
+            <Counter />
+        </div>
+
+        <div class="d-flex gap-2 mt-2">
+            <Card title="'First Card'" content="'This is the content of the first card.'"/>
+            <Card title="'HTML Card'" content="this.html"/>
+        </div>
     </t>
 
 </templates>
